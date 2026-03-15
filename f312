@@ -1,0 +1,18 @@
+A1, B1, C1 = map(int,input().split())
+A2, B2, C2 = map(int,input().split())
+n = int(input())
+
+ans = -10**18
+
+for x1 in range(n+1):
+    x2 = n - x1
+    
+    y1 = A1*x1*x1 + B1*x1 + C1
+    y2 = A2*x2*x2 + B2*x2 + C2
+    
+    total = y1 + y2
+    
+    if total > ans:
+        ans = total
+
+print(ans)
