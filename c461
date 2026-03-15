@@ -1,0 +1,21 @@
+a, b, r = map(int, input().split())
+
+A = a != 0
+B = b != 0
+
+found = False
+
+if int(A and B) == r:
+    print("AND")
+    found = True
+
+if int(A or B) == r:
+    print("OR")
+    found = True
+
+if int(A ^ B) == r:
+    print("XOR")
+    found = True
+
+if not found:
+    print("IMPOSSIBLE")
